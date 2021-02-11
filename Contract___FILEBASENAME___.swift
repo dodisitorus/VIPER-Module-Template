@@ -7,11 +7,18 @@
 //
 
 import Foundation
-
+import UIKit
 
 // MARK: View Output (Presenter -> View)
 protocol PresenterToView___VARIABLE_ModuleName___Protocol {
    
+    func getSelf() -> UIViewController
+    func getNav() -> UINavigationController
+    
+    // MARK: - Show/Hide Alert Loading
+    func hideLoading(completionHandler: @escaping (Bool) -> ())
+    func showLoading()
+    func showAlert(message: String)
 }
 
 
@@ -33,6 +40,9 @@ protocol PresenterToInteractor___VARIABLE_ModuleName___Protocol {
 
 // MARK: Interactor Output (Interactor -> Presenter)
 protocol InteractorToPresenter___VARIABLE_ModuleName___Protocol {
+    
+    func getSelf() -> UIViewController
+    
     
 }
 

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class ___VARIABLE_ModuleName___Presenter: ViewToPresenter___VARIABLE_ModuleName___Protocol {
 
@@ -18,4 +19,7 @@ class ___VARIABLE_ModuleName___Presenter: ViewToPresenter___VARIABLE_ModuleName_
 
 extension ___VARIABLE_ModuleName___Presenter: InteractorToPresenter___VARIABLE_ModuleName___Protocol {
     
+    func getSelf() -> UIViewController {
+        return view?.getSelf() ?? ___VARIABLE_ModuleName___ViewController()
+    }
 }
